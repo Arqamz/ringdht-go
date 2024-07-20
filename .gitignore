@@ -1,32 +1,23 @@
-# Prerequisites
-*.d
+# Allowlisting gitignore template for GO projects prevents us
+# from adding various unwanted local files, such as generated
+# files, developer configurations or IDE-specific files etc.
+#
+# Recommended: Go.AllowList.gitignore
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# Ignore everything
+*
 
-# Precompiled Headers
-*.gch
-*.pch
+# But not these files...
+!/.gitignore
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+!*.go
+!go.sum
+!go.mod
 
-# Fortran module files
-*.mod
-*.smod
+!README.md
+!LICENSE
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# !Makefile
 
-# Executables
-*.exe
-*.out
-*.app
+# ...even if they are in subdirectories
+!*/
